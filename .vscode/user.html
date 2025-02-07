@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            background-color: #f4f4f9;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .sidebar {
+            width: 15%;
+            height: 60%;
+            background: #015170;
+            color: rgb(216, 215, 215);
+            padding: 20px;
+          
+        }
+        .sidebar h2 {
+            text-align:left;
+            padding-left: 15px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li {
+            padding: 10px;
+            cursor: pointer;
+           
+        }
+        .sidebar li:hover{
+            background-color: #090909;
+        }
+        .content {
+            width: 60%;
+            padding: 20px;
+        }
+        .profile-section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .courses {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        .course-item {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        .completed {
+            background: #d4edda;
+        }
+        .ongoing {
+            background: #ffeeba;
+        }
+        .sidebar-right {
+            width: 20%;
+            padding: 20px;
+            background: #015170;
+        
+        }
+        .payment-info, .subscription {
+            background: #ffffff;
+            padding: 35px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+        .subscription H4{
+            text-align: center;
+        }
+        .subscription UL{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Hello! User</h2>
+            <nav>
+                <ul>
+                    <li>📁your Profile</li>
+                    <li>📚 your Records</li>
+                    <li>✅ Completed</li>
+                    <li>🎉 Events</li>
+                    <li>📅 Schedule</li>
+                    <li>📩 Messages</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- Profile Section -->
+            <section class="profile-section">
+                <div class="profile-info">
+                    <img src="/user.png" alt="User Profile" class="profile-pic">
+                    <div class="details">
+                        <h3>Subhajit Mondal</h3>
+                        <p>Registration Date: 24 November 2022</p>
+                        <p>City: Durgapur, Bengal</p>
+                        <p>Birth Date: 20 Jan 2006 </p>
+                        <p>Phone: +978 265 236 25</p>
+                        <div class="social-icons">
+                            🌐 📘 🐦 🎥 💼
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="RECORDS">
+                <h3>MY RECORDS</h3>
+                <div class="course-item completed">Tests <span>✅ Completed</span></div>
+                <div class="course-item completed">Allergies<span>✅ Completed</span></div>
+                <div class="course-item ongoing">Doctors priscriptions <span>🔄 Starts: 1 June 2023</span></div>
+            </section>
+        </main>
+
+       
+        <aside class="sidebar-right">
+            <div class="payment-info">
+                <h4>Payment Details</h4>
+                <p>Card Number: **** **** **** 296</p>
+                <p>G Pay | VISA</p>
+            </div>
+            <div class="subscription">
+                <h4>Success Premium Subscription</h4>
+                <ul>
+                    <li>1 Month Premium Free</li>
+                    <li>2 Months for New Users</li>
+                    <li>Best Courses Included</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

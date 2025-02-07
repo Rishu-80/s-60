@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessor Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            background-color: #f4f4f9;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .sidebar, .sidebar-right {
+            width: 20%;
+            height: 50%;
+            min-width: 200px;
+            background: #015170;
+            color: white;
+            padding: 20px;
+        }
+        .sidebar h2 {
+            text-align: left;
+            padding-left: 15px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li:hover {
+            background-color: black;
+        }
+        .sidebar li {
+            padding: 15px;
+            cursor: pointer;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            min-width: 300px;
+        }
+        .profile-section, .scan-history {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .scan-item {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            background: #d4edda;
+        }
+        .qr-scanner {
+            background: white;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 10px;
+            text-align: center;
+           
+        }
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background:  #015170;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: black;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar, .sidebar-right {
+                width: 100%;
+                text-align: center;
+            }
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>ACCESSOR PANEL</h2>
+            <nav>
+                <ul>
+                    <li>🏠 Dashboard</li>
+                    <li>📋 Scan History</li>
+                    <li>📝 Reports</li>
+                    <li>⚙️ Settings</li>
+                    <li>📩 Messages</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section class="profile-section">
+                <div class="profile-info">
+                    <img src="/user.png" alt="Accessor Profile" class="profile-pic">
+                    <div class="details">
+                        <h3>Dr.Rishu</h3>
+                        <p>Registration Date:24 November 2023</p>
+                        <p>Role: Medical Staff</p>
+                        <p>Department: Emergency Response</p>
+                        <p>Phone: +123 456 7890</p>
+                        <div class="social-icons">
+                            🌐 📘 🐦 🎥 💼
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="scan-history">
+                <h3>Recent Scans</h3>
+                <div class="scan-item">Patient XYZ - 07 Feb 2025</div>
+                <div class="scan-item">Patient ABC - 06 Feb 2025</div>
+            </section>
+        </main>
+
+        <aside class="sidebar-right">
+            <div class="qr-scanner">
+                <h4>Scan QR Code</h4>
+                <video id="qr-video" autoplay></video>
+                <button id="start-camera">Allow Camera</button>
+                <p id="qr-result">Waiting for scan...</p>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
